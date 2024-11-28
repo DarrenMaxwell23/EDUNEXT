@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gts.css">
+    <title>Profil Sekolah </title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #5a5353;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .section {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.5s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .facilities {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .facility-item {
+            width: 200px;
+            text-align: center;
+            margin: 15px;
+            padding: 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .facility-item:hover {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgb(90, 83, 83);
+            color: rgb(255, 254, 254);
+            padding: 30px;
+            border-radius: 15px;
+            z-index: 1000;
+            text-align: center;
+            animation: popupAnimation 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes popupAnimation {
+            from { 
+                opacity: 0; 
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+            to { 
+                opacity: 1; 
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Perkembangan Pendidikan</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="BBG.html">Bibliography</a></li>
+                <li><a href="cr.html">Credit</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        </header>
+    <div class="container">
+        <div class="header">
+            <h1>Apasih itu Sekolah?</h1>
+        </div>
+        <div class="background"></div>
+        <div class="section">
+            <h2>Pengertian Sekolah</h2>
+            <p>Sekolah adalah lembaga pendidikan formal yang dirancang untuk mendidik siswa di bawah bimbingan guru. Melalui proses pembelajaran, sekolah bertujuan mengembangkan pengetahuan, keterampilan, dan karakter siswa agar dapat berkontribusi secara positif dalam kehidupan bermasyarakat. Program kerja sekolah adalah rencana sistematis yang mencakup berbagai kegiatan untuk mendukung pencapaian sasaran dan tujuan pendidikan di sekolah. Program ini dirancang agar pelaksanaannya efektif dan efisien, serta menjadi acuan dalam penggunaan anggaran sesuai mutu dan kebutuhan sekolah. Fasilitas sekolah merupakan salah satu faktor yang dapat menunjang keberhasilan proses kegiatan belajar mengajar (KBM). Fasilitas sekolah yang dimaksud adalah sarana dan prasarana pendidikan yang dapat dimanfaatkan oleh siswa dan guru dalam rangka mencapai tujuan pembelajaran yang telah ditentukan.</p>
+        </div>
+
+        <div class="section">
+            <h2>Fasilitas Sekolah</h2>
+            <div class="facilities">
+                <div class="facility-item" onclick="showPopup('Ruang Kelas', 'https://sttheresia-jkt.sch.id/wp-content/uploads/Para-Peserta-Didik-kelas-X-PPLG-mengikuti-ibadat-sabda-dengan-khusyuk-scaled.jpg', 'Tempat tatap muka KBM dengan meja, kursi, papan tulis, dan perlengkapan lainnya.')">
+                    Ruang Kelas
+                </div>
+                <div class="facility-item" onclick="showPopup('Perpustakaan', 'https://www.sttheresia-jkt.sch.id/wp-content/uploads/Perpustakaan.png', 'Sumber informasi untuk pengayaan wawasan siswa dan guru di luar kurikulum.')">
+                    Perpustakaan
+                </div>
+                <div class="facility-item" onclick="showPopup('Lab. Komputer & Multimedia', 'https://www.sttheresia-jkt.sch.id/wp-content/uploads/LabKomSMA3.png', 'Fasilitas teknologi dengan puluhan komputer untuk menunjang pembelajaran.')">
+                    Lab. Komputer & Multimedia
+                </div>
+                <div class="facility-item" onclick="showPopup('Area Belajar', 'https://www.sttheresia-jkt.sch.id/wp-content/uploads/Ruang-SantaAgela-SMA.png', 'Area untuk diskusi, istirahat, atau kegiatan OSIS/MPK.')">
+                    Area Belajar
+                </div>
+                <div class="facility-item" onclick="showPopup('Sport Hall & Sarana Olahraga', 'https://www.sttheresia-jkt.sch.id/wp-content/uploads/Hall.png', 'Tempat dan peralatan untuk olahraga seperti badminton, tenis meja, dan senam.')">
+                    Sport Hall & Sarana Olahraga
+                </div>
+                <div class="facility-item" onclick="showPopup('Sarana Kesehatan (UKS)', 'https://www.sttheresia-jkt.sch.id/wp-content/uploads/UKS-lantai-2.png', 'Ruang pelayanan kesehatan untuk mendukung kebiasaan hidup sehat.')">
+                    Sarana Kesehatan (UKS)
+                </div>
+                <div class="facility-item" onclick="showPopup('Kantin', 'https://www.sttheresia-jkt.sch.id/wp-content/uploads/Kantin-1.jpg', 'Menyediakan makanan dan minuman sehat dengan harga terjangkau bagi siswa dan guru.')">
+                    Kantin
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2 id="popupTitle"></h2>
+        <img id="popupImage" src="" alt="Gambar Fasilitas">
+        <p id="popupDescription"></p>
+    </div>
+ <footer>
+      <p class="p"> "Menjadi Pemimpin Yang Peduli,Kreatif,Dan Berwawasan"</p>
+ </footer>
+    <script>
+        function showPopup(title, imageSrc, description) {
+            const popup = document.getElementById('popup');
+            const popupTitle = document.getElementById('popupTitle');
+            const popupImage = document.getElementById('popupImage');
+            const popupDescription = document.getElementById('popupDescription');
+            
+            popupTitle.textContent = title;
+            popupImage.src = imageSrc;
+            popupDescription.textContent = description;
+            popup.style.display = 'block';
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

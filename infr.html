@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perkembangan Infrastruktur Pendidikan Indonesia</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #445566; /* Slightly different from header's dark tone */
+            color: #f4f4f4; /* Lighter text for better contrast */
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            background-color: rgba(255,255,255,0.2);
+            z-index: -1;
+        }
+
+        .timeline-item {
+            transition: all 0.8s ease-out;
+        }
+
+        .timeline-item h2 {
+            color: #e6e6e6; /* Soft, light color for headings */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #d0d0d0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .timeline-item {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Adjusting timeline item backgrounds for better contrast */
+        .timeline-item .content-box {
+            background-color: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .impacts .impact-card {
+            background-color: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Perkembangan Infrastruktur</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="BBG.html">Bibliography</a></li>
+                <li><a href="cr.html">Credit</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-center mb-12 text-gray-200">
+            Perkembangan Infrastruktur Sekolah Indonesia
+        </h1>
+
+        <div id="timeline" class="relative max-w-4xl mx-auto">
+            <div class="timeline-line h-full"></div>
+
+            <div class="timeline-item mb-12 flex items-center w-full">
+                <div class="w-1/2 pr-8 text-right">
+                    <h2 class="text-2xl font-semibold">Masa Penjajahan</h2>
+                    <p class="text-gray-300">Akses pendidikan sangat terbatas, terutama di pedesaan. Fasilitas sederhana dan diskriminatif.</p>
+                </div>
+                <div class="w-1/2 content-box p-6 rounded-lg shadow-md">
+                    <img src="https://www.womanindonesia.co.id/wp-content/uploads/2022/08/SEKOLAH-BELANDA2_lu41a6.jpg" alt="Sekolah Masa Penjajahan" class="w-full rounded-lg">
+                </div>
+            </div>
+
+            <div class="timeline-item mb-12 flex items-center w-full flex-row-reverse">
+                <div class="w-1/2 pl-8">
+                    <h2 class="text-2xl font-semibold">Pasca Kemerdekaan</h2>
+                    <p class="text-gray-300">Pemerintah mulai membangun sekolah dengan fasilitas minimal, fokus pada pemerataan akses pendidikan.</p>
+                </div>
+                <div class="w-1/2 content-box p-6 rounded-lg shadow-md">
+                    <img src="https://jektvnews.disway.id/upload/74c27eb93409d88c9108d3dd9aec02df.jpg" alt="Sekolah Pasca Kemerdekaan" class="w-full rounded-lg">
+                </div>
+            </div>
+
+            <div class="timeline-item mb-12 flex items-center w-full">
+                <div class="w-1/2 pr-8 text-right">
+                    <h2 class="text-2xl font-semibold">Era Orde Baru</h2>
+                    <p class="text-gray-300">Perluasan jumlah sekolah, namun kualitas infrastruktur belum merata di seluruh wilayah.</p>
+                </div>
+                <div class="w-1/2 content-box p-6 rounded-lg shadow-md">
+                    <img src="https://bimamedia-gurusiana.ap-south-1.linodeobjects.com/d891bf1b077927ebafb0401ff8dc98c2/2020/10/26/l-orbajpg20201026212534.jpeg" alt="Sekolah Era Orde Baru" class="w-full rounded-lg">
+                </div>
+            </div>
+
+            <div class="timeline-item mb-12 flex items-center w-full flex-row-reverse">
+                <div class="w-1/2 pl-8">
+                    <h2 class="text-2xl font-semibold">Era Reformasi</h2>
+                    <p class="text-gray-300">Integrasi teknologi digital, peningkatan kualitas infrastruktur, dan metode pembelajaran interaktif.</p>
+                </div>
+                <div class="w-1/2 content-box p-6 rounded-lg shadow-md">
+                    <img src="https://www.sttheresia-jkt.sch.id/wp-content/uploads/Ruang-Kelas-1.png" alt="Sekolah Era Reformasi" class="w-full rounded-lg">
+                </div>
+            </div>
+        </div>
+
+        <div class="impacts text-center mt-16">
+            <h3 class="text-3xl font-bold mb-6 text-gray-200">Dampak Pembangunan Infrastruktur</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="impact-card p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-4">Akses Pendidikan</h4>
+                    <p>Pembangunan infrastruktur membuka akses pendidikan yang lebih luas, terutama di daerah terpencil.</p>
+                </div>
+                <div class="impact-card p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-4">Kualitas Pembelajaran</h4>
+                    <p>Fasilitas modern mendukung metode pengajaran interaktif dan pengembangan keterampilan siswa.</p>
+                </div>
+                <div class="impact-card p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-4">Tantangan Global</h4>
+                    <p>Infrastruktur modern mempersiapkan generasi muda untuk menghadapi kompleksitas dunia global.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>"Menjadi Pemimpin Yang Peduli, Kreatif, Dan Berwawasan"</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const timelineLine = document.querySelector('.timeline-line');
+
+            timelineLine.style.height = `${document.getElementById('timeline').offsetHeight}px`;
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            timelineItems.forEach(item => {
+                item.style.opacity = 0;
+                item.style.transform = 'translateY(20px)';
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>

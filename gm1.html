@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordwall Interactive Learning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #5c5d5f;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .activity-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            width: 300px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .activity-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #373538, #676869);
+        }
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .activity-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .activity-card p {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #88858b, #565759);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: transform 0.3s ease;
+            font-weight: 500;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        .wordwall-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        .activities-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777777;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"> Game </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="BBG.html">Bibliography</a></li>
+                <li><a href="cr.html">Credit</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+        <!-- Wordwall Embedded Activities Section -->
+        <div class="activities-section">
+            <!-- Wordwall Embedded Activity 1 -->
+            <iframe 
+                class="wordwall-iframe" 
+                src="https://wordwall.net/embed/1484efae17f34ff68bc1bd770888136e?themeId=1&templateId=3&fontStackId=0" 
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
+
+        </div>
+    </div>]
+
+
+    <footer>
+        <p class="p"> "Menjadi Pemimpin Yang Peduli,Kreatif,Dan Berwawasan"</p>
+   </footer>
+    <script>
+        // Optional: Add some interactivity
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Redirecting to activity...');
+                // You can add more complex navigation logic here
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submenu {
+    display: none; /* Hide submenu by default */
+    position: absolute;
+    left: 0;
+    top: 40px; /* Adjust based on the button height */
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.submenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu li {
+    padding: 8px 12px;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.submenu li:hover {
+    background-color: #ddd; /* Highlight on hover */
+}

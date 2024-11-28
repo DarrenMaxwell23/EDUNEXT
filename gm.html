@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #565252;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .quiz-card {
+            background-color: rgb(62, 61, 71);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .quiz-card:hover {
+            transform: scale(1.05);
+        }
+        .quiz-card h3 {
+            color: #fafcff;
+            margin-bottom: 10px;
+        }
+        .quiz-card p {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #0a2e15;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .quiz-iframe {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777777;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"> Game </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="BBG.html">Bibliography</a></li>
+                <li><a href="cr.html">Credit</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+      
+
+        <!-- Embedded Quiz Section -->
+        <div id="quiz-section">
+            <iframe 
+                class="quiz-iframe" 
+                src="https://quizizz.com/embed/quiz/603d063c7e9984001ec41f3f" 
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    <div class="card-container">
+        <!-- Quiz Card 1 -->
+        <div class="quiz-card">
+            <h3>Wordwall</h3>
+            <p>Coba Pengetahuanmu dengan quiz melalui wordwall</p>
+            <a href="gm1.html" class="btn">Start Quiz</a>
+        </div>
+
+        <!-- Quiz Card 2 -->
+        <div class="quiz-card">
+            <h3>Wordwall</h3>
+            <p>Coba Pengetahuanmu dengan quiz melalui wordwall</p>
+            <a href="gm2.html" class="btn">Begin Quiz</a>
+        </div>
+
+        <!-- Quiz Card 3 -->
+        <div class="quiz-card">
+            <h3>Space Invader</h3>
+            <p>Mainin Game Pixel </p>
+            <a href="gm3.html" class="btn">Start Playing</a>
+        </div>
+    </div>
+    <footer>
+        <p class="p"> "Menjadi Pemimpin Yang Peduli,Kreatif,Dan Berwawasan"</p>
+   </footer>
+</body>
+</html>

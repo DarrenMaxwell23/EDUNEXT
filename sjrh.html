@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Evolusi Sistem Pembelajaran Indonesia</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #1a202c;
+            font-family: 'Inter', sans-serif;
+            color: #e2e8f0;
+        }
+        header {
+            background-color: #333;
+            color: #e2e8f0;
+            padding: 10px 20px;
+        }
+        .timeline-dot {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(255,255,255,0.1);
+        }
+        .timeline-dot:hover {
+            transform: scale(1.2) rotate(360deg);
+            box-shadow: 0 4px 6px rgba(255,255,255,0.2);
+        }
+        .modal {
+            background-color: rgba(0,0,0,0.7);
+        }
+        .nav-links a {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #4fd1c5;
+        }
+        @media (max-width: 768px) {
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+            .timeline-item > div {
+                width: 100% !important;
+                text-align: center !important;
+                padding: 10px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="flex justify-between items-center">
+            <div class="logo text-gray-200 font-bold text-xl">Perkembangan Pendidikan</div>
+            <ul class="nav-links flex space-x-4">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="BBG.html">Bibliography</a></li>
+                <li><a href="cr.html">Credit</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="bg-gray-900">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center text-gray-300 mb-12">Evolusi Sistem Pembelajaran Indonesia</h1>
+        
+        <div class="relative">
+            <div class="absolute inset-y-0 left-1/2 transform -translate-x-1/2 w-1 bg-gray-700"></div>
+            
+            <div class="timeline space-y-8">
+                <!-- Masa Penjajahan Belanda -->
+                <div class="timeline-item flex items-center justify-between">
+                    <div class="w-1/2 pr-8 text-right">
+                        <h3 class="font-bold text-xl text-gray-300">Masa Penjajahan Belanda</h3>
+                        <p class="text-gray-500">Pendidikan satu arah, berbasis kolonial</p>
+                    </div>
+                    <div class="timeline-dot bg-gray-600 w-8 h-8 rounded-full cursor-pointer hover:bg-gray-500" data-period="belanda"></div>
+                    <div class="w-1/2 pl-8"></div>
+                </div>
+
+                <!-- Masa Pendudukan Jepang -->
+                <div class="timeline-item flex items-center justify-between flex-row-reverse">
+                    <div class="w-1/2 pl-8">
+                        <h3 class="font-bold text-xl text-gray-300">Masa Pendudukan Jepang</h3>
+                        <p class="text-gray-500">Militerisasi dalam pembelajaran</p>
+                    </div>
+                    <div class="timeline-dot bg-gray-600 w-8 h-8 rounded-full cursor-pointer hover:bg-gray-500" data-period="jepang"></div>
+                    <div class="w-1/2 pr-8 text-right"></div>
+                </div>
+
+                <!-- Masa Awal Kemerdekaan -->
+                <div class="timeline-item flex items-center justify-between">
+                    <div class="w-1/2 pr-8 text-right">
+                        <h3 class="font-bold text-xl text-gray-300">Masa Awal Kemerdekaan</h3>
+                        <p class="text-gray-500">Transisi ke Sistem Nasional</p>
+                    </div>
+                    <div class="timeline-dot bg-gray-600 w-8 h-8 rounded-full cursor-pointer hover:bg-gray-500" data-period="kemerdekaan"></div>
+                    <div class="w-1/2 pl-8"></div>
+                </div>
+
+                <!-- Masa Orde Baru -->
+                <div class="timeline-item flex items-center justify-between flex-row-reverse">
+                    <div class="w-1/2 pl-8">
+                        <h3 class="font-bold text-xl text-gray-300">Masa Orde Baru</h3>
+                        <p class="text-gray-500">Sentralisasi Kurikulum</p>
+                    </div>
+                    <div class="timeline-dot bg-gray-600 w-8 h-8 rounded-full cursor-pointer hover:bg-gray-500" data-period="ordebaru"></div>
+                    <div class="w-1/2 pr-8 text-right"></div>
+                </div>
+
+                <!-- Era Reformasi -->
+                <div class="timeline-item flex items-center justify-between">
+                    <div class="w-1/2 pr-8 text-right">
+                        <h3 class="font-bold text-xl text-gray-300">Era Reformasi</h3>
+                        <p class="text-gray-500">Pendekatan Berbasis Kompetensi</p>
+                    </div>
+                    <div class="timeline-dot bg-gray-600 w-8 h-8 rounded-full cursor-pointer hover:bg-gray-500" data-period="reformasi"></div>
+                    <div class="w-1/2 pl-8"></div>
+                </div>
+
+                <!-- Kurikulum 2013 -->
+                <div class="timeline-item flex items-center justify-between flex-row-reverse">
+                    <div class="w-1/2 pl-8">
+                        <h3 class="font-bold text-xl text-gray-300">Kurikulum 2013</h3>
+                        <p class="text-gray-500">Pembelajaran Aktif dan Inovatif</p>
+                    </div>
+                    <div class="timeline-dot bg-gray-600 w-8 h-8 rounded-full cursor-pointer hover:bg-gray-500" data-period="kurikulum2013"></div>
+                    <div class="w-1/2 pr-8 text-right"></div>
+                </div>
+
+                <!-- Masa Pandemi -->
+                <div class="timeline-item flex items-center justify-between">
+                    <div class="w-1/2 pr-8 text-right">
+                        <h3 class="font-bold text-xl text-gray-300">Masa Pandemi</h3>
+                        <p class="text-gray-500">Transformasi Pembelajaran Daring</p>
+                    </div>
+                    <div class="timeline-dot bg-gray-600 w-8 h-8 rounded-full cursor-pointer hover:bg-gray-500" data-period="pandemi"></div>
+                    <div class="w-1/2 pl-8"></div>
+                </div>
+
+                <!-- Era Merdeka Belajar -->
+                <div class="timeline-item flex items-center justify-between flex-row-reverse">
+                    <div class="w-1/2 pl-8">
+                        <h3 class="font-bold text-xl text-gray-300">Era Merdeka Belajar</h3>
+                        <p class="text-gray-500">Fleksibilitas Pembelajaran</p>
+                    </div>
+                    <div class="timeline-dot bg-gray-600 w-8 h-8 rounded-full cursor-pointer hover:bg-gray-500" data-period="merdekaबelajar"></div>
+                    <div class="w-1/2 pr-8 text-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-12 bg-gray-900">
+        <div class="max-w-4xl mx-auto bg-gray-800 rounded-2xl shadow-2xl p-8">
+            <h2 class="text-3xl font-bold text-center text-gray-300 mb-6">Perkembangan Sistem Pembelajaran di Indonesia</h2>
+            <div class="text-gray-400 text-lg leading-relaxed space-y-4">
+                <p>Sistem pembelajaran di Indonesia telah berkembang pesat seiring waktu, dimulai dari pembelajaran satu arah dengan fokus pada penguasaan materi dasar dan penggunaan media terbatas seperti papan tulis dan buku teks.</p>
+                
+                <p>Seiring berjalannya waktu, peran guru beralih menjadi fasilitator, dengan metode pembelajaran berbasis diskusi, kerja kelompok, dan proyek. Teknologi mulai diintegrasikan dengan penggunaan komputer dan proyektor, serta penilaian yang mencakup keterampilan berpikir kritis, kreativitas, dan kolaborasi.</p>
+                
+                <p>Saat ini, sistem pembelajaran semakin fleksibel dengan digitalisasi dan pendekatan Merdeka Belajar, dimana siswa dapat belajar melalui media daring dan hybrid, sambil mengembangkan keterampilan abad ke-21 yang relevan dengan dunia yang terus berubah.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="detailModal" class="fixed inset-0 z-50 modal flex items-center justify-center hidden">
+        <div class="modal-content bg-gray-800 rounded-2xl shadow-2xl p-8 max-w-2xl w-full mx-4">
+            <h2 id="modalTitle" class="text-3xl font-bold mb-4 text-center text-gray-300"></h2>
+            <p id="modalContent" class="text-gray-400 leading-relaxed text-lg"></p>
+            <button onclick="closeModal()" class="mt-6 mx-auto block bg-gray-700 text-gray-200 px-6 py-3 rounded-full hover:bg-gray-600 transition-colors">Tutup</button>
+        </div>
+    </div>
+</div>
+    <footer class="bg-gray-900 text-gray-600 text-center p-4">
+        <p>"Menjadi Pemimpin Yang Peduli, Kreatif, Dan Berwawasan"</p>
+    </footer>
+
+    <script>
+        const periodDetails = {
+            'belanda': {
+                title: 'Masa Penjajahan Belanda',
+                content: 'Sistem pembelajaran bersifat satu arah dengan guru sebagai otoritas mutlak. Kurikulum berbasis kebutuhan kolonial, fokus pada membaca, menulis, berhitung, dan pengenalan budaya Eropa. Sistem hierarkis dengan kelas dibagi sesuai status sosial.'
+            },
+            'jepang': {
+                title: 'Masa Pendudukan Jepang (1942-1945)',
+                content: 'Sistem pembelajaran diorientasikan pada propaganda Jepang. Bahasa Jepang digunakan sebagai media pengantar. Pembelajaran mencakup keterampilan praktis seperti pertanian dan latihan fisik, dengan disiplin ketat.'
+            },
+            'kemerdekaan': {
+                title: 'Masa Awal Kemerdekaan (1945-1965)',
+                content: 'Sistem pembelajaran mulai menekankan nasionalisme dan pengenalan Pancasila. Guru masih memegang kendali penuh di kelas, namun mulai ada pendekatan diskusi. Fasilitas terbatas, tetapi semangat belajar tinggi seiring dengan cita-cita kemerdekaan.'
+            },
+            'ordebaru': {
+                title: 'Masa Orde Baru (1966-1998)',
+                content: 'Sistem pembelajaran terpusat, mengikuti kurikulum nasional dengan fokus pada stabilitas dan pembangunan. Metode ceramah menjadi utama, dengan evaluasi berbasis ujian tertulis. Penekanan pada hapalan dan penguasaan materi yang seragam di seluruh Indonesia.'
+            },
+            'reformasi': {
+                title: 'Era Reformasi (1998-2013)',
+                content: 'Diperkenalkannya Kurikulum Berbasis Kompetensi (KBK) dan Kurikulum Tingkat Satuan Pendidikan (KTSP). Guru mulai berperan sebagai fasilitator, bukan sekadar instruktur. Siswa didorong untuk aktif melalui diskusi, kerja kelompok, dan presentasi.'
+            },
+            'kurikulum2013': {
+                title: 'Kurikulum 2013 (2013-sekarang)',
+                content: 'Pendekatan pembelajaran berbasis proyek, diskusi kelompok, dan eksplorasi mandiri. Guru memfasilitasi pembelajaran berbasis kompetensi dengan penguatan karakter. Penggunaan teknologi semakin meluas, dengan adanya e-learning dan perangkat digital.'
+            },
+            'pandemi': {
+                title: 'Masa Pandemi COVID-19 (2020-2022)',
+                content: 'Pembelajaran kelas beralih ke platform daring seperti Zoom, Google Classroom, dan Microsoft Teams. Guru dan siswa beradaptasi dengan teknologi digital. Model hybrid (gabungan luring dan daring) mulai diterapkan di beberapa sekolah.'
+            },
+            'merdekaबelajar': {
+                title: 'Era Merdeka Belajar (2019-sekarang)',
+                content: 'Sistem pembelajaran kelas diubah menjadi lebih fleksibel, menyesuaikan kebutuhan siswa. Fokus pada pendekatan berbasis proyek untuk mengembangkan kreativitas dan kemampuan analitis. Penghapusan Ujian Nasional dan penguatan Asesmen Nasional.'
+            }
+        };
+
+        function openModal(period) {
+            const modal = document.getElementById('detailModal');
+            const titleEl = document.getElementById('modalTitle');
+            const contentEl = document.getElementById('modalContent');
+
+            titleEl.textContent = periodDetails[period].title;
+            contentEl.textContent = periodDetails[period].content;
+            
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('detailModal');
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+
+        document.querySelectorAll('.timeline-dot').forEach(dot => {
+            dot.addEventListener('click', () => {
+                openModal(dot.dataset.period);
+            });
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('detailModal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeModal();
+            }
+        });
+        document.addEventListener('scroll', () => {
+            const conclusionSection = document.querySelector('.bg-gray-50');
+            const scrollPosition = window.scrollY;
+            
+            if (scrollPosition > conclusionSection.offsetTop - window.innerHeight / 2) {
+                conclusionSection.classList.add('animate-fade-in');
+            }
+        });
+    </script>
+</body>
+</html>

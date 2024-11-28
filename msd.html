@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Masa Depan Pendidikan</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        
+        body { 
+            background: linear-gradient(135deg, #6a6969, #4f4b4b); 
+            overflow-x: hidden;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px; /* Add some padding */
+            background-color: #444; /* Background color for the nav */
+        }
+
+        .logo {
+            font-size: 18px; /* Logo font size */
+            font-weight: bold; /* Logo font weight */
+            color: #fff;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+
+        .menu-toggle {
+            display: none; /* Hide by default, can be shown for mobile */
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            height: 3px;
+            width: 25px;
+            background: #fff;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        
+        .floating-element {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .glitch-text {
+            animation: glitch 1s linear infinite;
+        }
+        @keyframes glitch {
+            2%, 64% { transform: translate(2px, 0) skew(0deg); }
+            4%, 60% { transform: translate(-2px, 0) skew(0deg); }
+            62% { transform: translate(0, 0) skew(5deg); }
+        }
+        footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777777;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Masa Depan Pendidikan</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="BBG.html">Bibliography</a></li>
+                <li><a href="cr.html">Credit</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        </header>
+        <div class="font-sans p-8 text-center">
+    <div class="max-w-4xl mx-auto bg-gray-200/70 rounded-xl shadow-2xl p-10 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-300 to-gray-400 opacity-50 -z-10"></div>
+        
+        <h1 class="text-5xl font-bold mb-6 text-gray-800 glitch-text">
+            Masa Depan Pendidikan
+        </h1>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-gray-100/80 p-6 rounded-lg shadow-md floating-element">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">🤖 Teknologi Cerdas</h2>
+                <p class="text-gray-700">AI membuka jalur belajar personal yang disesuaikan dengan minat dan kemampuan setiap individu.</p>
+            </div>
+            
+            <div class="bg-gray-100/80 p-6 rounded-lg shadow-md floating-element">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">🌐 Akses Digital</h2>
+                <p class="text-gray-700">Platform digital menghapuskan batas geografis, memungkinkan edukasi global tanpa hambatan.</p>
+            </div>
+            
+            <div class="bg-gray-100/80 p-6 rounded-lg shadow-md floating-element">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">🤝 Pendekatan Holistik</h2>
+                <p class="text-gray-700">Mengintegrasikan teknologi dengan sentuhan manusiawi untuk pengalaman belajar komprehensif.</p>
+            </div>
+        </div>
+
+        <div class="mt-10 text-gray-800">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Tantangan & Solusi</h3>
+            <ul class="space-y-4">
+                <li class=" font-semibold text-gray-900 mb-4">
+                    ⚖️ Di masa depan, pendidikan akan didominasi teknologi canggih seperti AI dan platform digital, membuka akses lebih luas dan memungkinkan pembelajaran personal. Namun, ketimpangan teknologi dapat memperbesar kesenjangan, dan terlalu mengandalkan teknologi bisa mengurangi interaksi sosial serta kemampuan kritis. Pendekatan holistik diperlukan agar manfaatnya maksimal dan risikonya minimal.
+                </li>
+        
+            </ul>
+        </div>
+    </div>
+</div>
+    <footer>
+        <p class="p"> "Menjadi Pemimpin Yang Peduli,Kreatif,Dan Berwawasan"</p>
+   </footer>
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            document.querySelectorAll('.floating-element').forEach(element => {
+                const speed = 0.5;
+                const x = (window.innerWidth - e.pageX * speed) / 100;
+                const y = (window.innerHeight - e.pageY * speed) / 100;
+                element.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

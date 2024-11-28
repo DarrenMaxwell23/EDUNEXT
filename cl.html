@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pengertian Kelas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cls.css">
+    <style>
+       
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #3e3e3f 0%, #c3cfe2 100%);
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px; /* Add some padding */
+            background-color: #444; /* Background color for the nav */
+        }
+
+        .logo {
+            font-size: 18px; /* Logo font size */
+            font-weight: bold; /* Logo font weight */
+            color: #fff;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+
+        .menu-toggle {
+            display: none; /* Hide by default, can be shown for mobile */
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            height: 3px;
+            width: 25px;
+            background: #fff;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            perspective: 1000px;
+        }
+
+        .content-card {
+            background: rgb(54, 52, 52);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+            transform: translateZ(-50px) rotateX(10deg);
+            opacity: 0;
+            transition: all 0.8s ease;
+            color: #fff;
+        }
+
+        .content-card.active {
+            transform: translateZ(0) rotateX(0);
+            opacity: 1;
+        }
+
+        h1, h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h1::after, h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            width: 20px;
+            height: 20px;
+            background: #2575fc;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .interactive-highlight {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .interactive-highlight:hover {
+            background-color: rgba(37, 117, 252, 0.1);
+            transform: scale(1.02);
+        }
+
+        .quote-box {
+            background-color: #f4f4f4;
+            border-left: 5px solid #2575fc;
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .content-card {
+                padding: 20px;
+            }
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 50px;
+            border: 2px solid #2575fc;
+            border-radius: 15px;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            background: #2575fc;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            animation: move 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        @keyframes move {
+            0% { top: 10px; }
+            50% { top: 30px; }
+            100% { top: 10px; }
+        }
+        footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777777;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Perkembangan Pendidikan</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="BBG.html">Bibliography</a></li>
+                <li><a href="cr.html">Credit</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        </header>
+    <div class="container">
+        <div class="content-card">
+            <h1>Pengertian Kelas</h1>
+            <p>Menurut KBBI, kelas merupakan ruang tempat belajar di sekolah. Selain ruangan tempat belajar di sekolah, kelas juga dapat berada di luar sekolah, seperti tempat les, bimbel, bahkan di gereja sekalipun.</p>
+        </div>
+
+        <div class="content-card">
+            <div class="section-title">
+                <span></span>
+                <h2>Menyesuaikan dengan Perkembangan Teknologi</h2>
+            </div>
+            <p>Pembelajaran yang efektif sangat bergantung pada proses pencapaian tujuan dalam waktu yang tepat. Dengan implementasi Kurikulum Merdeka, guru menggunakan pendekatan diferensiasi berdasarkan fase pertumbuhan anak untuk meningkatkan efektivitas pembelajaran. Di era modern ini, guru lebih mengedepankan penggunaan teknologi dalam pengajaran, yang semakin penting setelah pandemi mendorong digitalisasi dalam pendidikan. Meskipun teknologi digunakan, guru juga tetap menggunakan metode tradisional seperti buku dan papan tulis. Mereka seringkali mengajar dengan cara yang unik dan menarik, seperti memberikan nilai tambahan bagi siswa yang aktif menjawab pertanyaan atau menggunakan permainan interaktif. Aplikasi seperti Kahoot!, Quizizz, dan Google Classroom juga dimanfaatkan untuk membuat pembelajaran lebih menarik dan memotivasi siswa. Dengan menggabungkan metode tradisional dan teknologi modern, pengalaman belajar dapat menjadi lebih efektif dan menyenangkan.
+                </p>
+  
+        </div>
+
+        <div class="content-card">
+            <div class="section-title">
+                <span></span>
+                <h2>Menyesuaikan dengan Perkembangan Teknologi</h2>
+            </div>
+            <p>Menyesuaikan dengan perkembangan teknologi modern pada masa kini, guru-guru lebih mengedepankan penggunaan teknologi di dalam pembelajaran. Cara mengajar ini juga dipengaruhi oleh terjadinya pandemi di seluruh dunia beberapa waktu lalu yang mendorong penggunaan teknologi di dalam segala bidang, salah satunya di dalam bidang pendidikan.</p>
+            <p>Selain menggunakan teknologi, pada saat ini, guru juga masih mengajarkan murid-muridnya dengan tidak menggunakan teknologi. Seperti menggunakan buku dan menulis di papan tulis untuk menerangkan materi pembelajarannya pada murid-muridnya. Beberapa guru juga mengajar murid-muridnya dengan berbagai cara unik dan menarik yang membuat muridnya tetap semangat belajar, contohnya memberikan nilai tambahan untuk murid yang berani menjawab pertanyaan, memberikan games mengenai materi yang sedang dibahas, dan lainnya.</p>
+        </div>
+      
+        <div class="content-card">
+            <div class="section-title">
+                <span></span>
+                <h2>Perilaku Murid</h2>
+            </div>
+            <p>Kelas mempunyai berbagai peraturan dan norma yang wajib ditaati oleh semua murid. Contohnya adalah menghargai guru ketika sedang menerangkan materi, saling menghormati, tidak membuat kegaduhan di kelas, mengumpulkan tugas tepat waktu, dan masih banyak lainnya. Namun, masih banyak sekali murid-murid yang tidak menaati peraturan yang menuntun mereka untuk menjadi lebih disiplin, di dalam, maupun di luar kelas.</p>
+            <p>Walaupun penuh dengan tolak-belakang, masih ada banyak siswa siswi yang masih memikirkan satu sama lain. Ada pula yang membantu temannya untuk meningkatkan nilainya, dan mengajak temannya untuk lebih rajin lagi.</p>
+        </div>
+      
+        <div class="content-card">
+            <div class="section-title">
+                <span></span>
+                <h2>Bagaimana Murid Ingin Diperlakukan</h2>
+            </div>
+            <p>Murid ingin diperlakukan dengan cara dihargai dan didengarkan di dalam kelas oleh guru. Zaman dulu, murid-murid mendapatkan perlakuan yang kurang adil oleh guru. Untungnya, saat ini murid-murid lebih dihargai. Ada pula beberapa cara murid ingin diperlakukan di dalam kelas selain:</p>
+            <ul>
+                <li><strong>Kebebasan Berpendapat:</strong> Murid ingin agar mereka dapat berpendapat dengan bebas di kelas, mereka ingin pendapat mereka didengarkan.</li>
+                <li><strong>Diperlakukan dengan Adil:</strong> Setiap murid ingin merasa diperlakukan dengan adil tanpa diskriminasi.</li>
+                <li><strong>Diberikan Dukungan:</strong> Murid ingin mendapat dukungan dalam belajar, baik itu berupa bimbingan akademik maupun motivasi pribadi.</li>
+                <li><strong>Pemahaman dan Kesabaran:</strong> Guru yang sabar dalam menjelaskan materi akan sangat membantu murid untuk lebih memahami pelajaran.</li>
+            </ul>
+        </div>
+      
+        <div class="content-card">
+            <div class="section-title">
+                <span></span>
+                <h2>Kesimpulan</h2>
+            </div>
+            <p>Walaupun murid memiliki pandangan dan keinginan sendiri untuk diperlakukan sedemikian rupa, tetapi para guru juga memiliki keinginan untuk memberikan segalanya kepada murid-muridnya. Perlakuan yang sesuai dengan ke inginan ini dapat menciptakan suasana kelas yang positif dan memotivasi murid untuk lebih bersemangat dalam belajar.</p>
+        </div>
+    </div>
+
+    <div class="scroll-indicator"></div>
+    <footer>
+        <p class="p"> "Menjadi Pemimpin Yang Peduli,Kreatif,Dan Berwawasan"</p>
+   </footer>
+
+    <script>
+        // Scroll and reveal animations
+        const cards = document.querySelectorAll('.content-card');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peran Siswa</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #333435 0%, #c3cfe2 100%);
+            color: #2c3e50;
+        }
+  
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px; /* Add some padding */
+            background-color: #444; /* Background color for the nav */
+        }
+
+        .logo {
+            font-size: 18px; /* Logo font size */
+            font-weight: bold; /* Logo font weight */
+            color: #fff;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+
+        .menu-toggle {
+            display: none; /* Hide by default, can be shown for mobile */
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            height: 3px;
+            width: 25px;
+            background: #fff;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://i0.wp.com/newsroom.co.nz/wp-content/uploads/2023/03/68lnUAhi2dDWYGa1C1aG-1-scaled.jpg?fit=1200%2C800&ssl=1');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: rgb(12, 112, 74);
+            padding: 2rem;
+font-family: myFirstFont;
+        }
+        @font-face {
+    font-family: myFirstFont;
+    src: url(Holen\ Vintage.otf)
+}
+
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            background: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 1rem;
+            color: white;
+            font-size: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #727472 0%, #404142 100%);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            color: #204330;
+            display: inline-block;
+            margin: 0.5rem 0;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            border-left: 5px solid #3498db;
+            padding-left: 1rem;
+            margin: 2rem 0;
+            color: #fff;
+        }
+        footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777777;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Peran Siswa</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="BBG.html">Bibliography</a></li>
+                <li><a href="cr.html">Credit</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        </header>
+    <div class="hero">
+        <div>
+            <h1>Peran Siswa</h1>
+            <!-- <p class="highlight">Di Era Digital Modern</p> -->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card" data-aos="fade-up">
+            <h2>Peran Murid dalam Konteks UUD 1945</h2>
+            <p>Sebagai murid, kita memiliki peran penting dalam mencapai tujuan pendidikan nasional yang tercantum dalam UUD 1945, khususnya dalam upaya "mencerdaskan kehidupan bangsa." Melalui pembelajaran aktif, disiplin, dan pengembangan diri, kita berkontribusi pada visi pendidikan nasional.</p>
+        </div>
+
+        <div class="icon-container">
+            <div class="icon">📱</div>
+            <div class="icon">💻</div>
+            <div class="icon">📚</div>
+        </div>
+
+        <div class="card" data-aos="fade-up">
+            <h2>Hak dan Kewajiban Murid</h2>
+            <p> Pasal 31 Ayat (1) UUD 1945 menegaskan bahwa setiap warga negara berhak mendapatkan pendidikan. Sebagai penerima hak tersebut, kita bertanggung jawab untuk memanfaatkan pendidikan dengan baik dan berkontribusi pada kemajuan bangsa. Selain pencapaian akademik, kita juga harus mengembangkan sikap positif seperti disiplin, kerja keras, dan tanggung jawab, yang mencerminkan nilai-nilai Pancasila.</p>
+        </div>
+
+        <div class="quote" data-aos="fade-right">
+            "Di luar pencapaian akademik, murid-murid harus bertanggung jawab dalam membangun karakter dan moral mereka, seperti integritas, ketekunan, rasa hormat, dan rasa tanggung jawab sosial."
+        </div>
+
+        <div class="card" data-aos="fade-up">
+            <h2>Langkah Kecil sebagai Murid</h2>
+            <p><li>Menjaga Disiplin dan Kehadiran: Hadir tepat waktu menunjukkan tanggung jawab.</li>
+                <li>Menyiapkan Bahan Belajar: Persiapan yang baik membantu fokus saat belajar.</li>
+                <li>Aktif Bertanya dan Berdiskusi: Ini memperkaya pemahaman materi.</li>
+                <li>Menghargai Guru dan Teman: Menciptakan suasana kelas yang kondusif.</li>
+                <li>Menyelesaikan Tugas Tepat Waktu: Menunjukkan komitmen terhadap pendidikan.</li> 
+                <li>Menciptakan Suasana Kelas Nyaman: Kebersihan dan kenyamanan mendukung pembelajaran.</li> 
+                </p>
+        </div>
+
+        <div class="card" data-aos="fade-up">
+            <h2>Pertanggung Jawaban Siswa di Era Sekarang</h2>
+            <p>Di era digital, murid dituntut untuk mandiri dalam belajar dan bertanggung jawab atas penggunaan teknologi. Mereka harus mampu mengelola waktu belajar, menyelesaikan tugas tepat waktu, dan membangun karakter yang baik, seperti integritas dan rasa tanggung jawab sosial.
+
+                Murid juga diharapkan untuk menjaga integritas akademik dengan menghindari plagiarisme dan kecurangan. Partisipasi dalam pengambilan keputusan di sekolah juga merupakan bentuk tanggung jawab terhadap komunitas sekolah.
+                
+                Dengan demikian, peran murid sangat vital dalam mewujudkan tujuan pendidikan nasional dan membangun karakter bangsa yang baik.</p>
+        </div>
+    </div>
+    <footer>
+        <p class="p"> "Menjadi Pemimpin Yang Peduli,Kreatif,Dan Berwawasan"</p>
+   </footer>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 200
+        });
+    </script>
+</body>
+</html>
